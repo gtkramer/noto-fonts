@@ -1,19 +1,20 @@
 pkgbase = noto-fonts
 	pkgdesc = Google Noto TTF fonts
-	pkgver = 24.4.1
+	pkgver = 24.5.1
 	pkgrel = 1
 	epoch = 1
 	url = https://fonts.google.com/noto
 	arch = any
 	license = custom:SIL
-	source = https://github.com/notofonts/notofonts.github.io/archive/noto-monthly-release-24.4.1.tar.gz
+	makedepends = git
+	source = git+https://github.com/notofonts/notofonts.github.io#tag=noto-monthly-release-24.5.1
 	source = 66-noto-sans.conf
 	source = 66-noto-serif.conf
 	source = 66-noto-mono.conf
 	source = 46-noto-sans.conf
 	source = 46-noto-serif.conf
 	source = 46-noto-mono.conf
-	sha256sums = 501beb5b4b930f959546790b0c51c4544cdd97bc02c7193f50774323c49167fc
+	sha256sums = 5281ae6491e695ce772c91667dcd9e52f7f9b28ebd3b1c6f7a49615e5b1f744a
 	sha256sums = 52684bebf6447be22618d2a04ff37623ec92f9d8ccf6b6f972e5bcbcfee90d69
 	sha256sums = 4459944b63dc083107280f5d7375c69746bf80a09416a4a4909a100e58e5a33a
 	sha256sums = 4526289f59654e2a81dc734669a1ae4e416f9a56d0896ec3741c6bf065baf8a8

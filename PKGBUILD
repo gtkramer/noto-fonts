@@ -8,7 +8,7 @@ pkgrel=1
 pkgdesc='Google Noto TTF fonts'
 arch=(any)
 url='https://fonts.google.com/noto'
-license=(custom:SIL)
+license=(OFL-1.1-no-RFN)
 makedepends=(git)
 source=(git+https://github.com/notofonts/notofonts.github.io#tag=noto-monthly-release-$pkgver
         66-noto-sans.conf 66-noto-serif.conf 66-noto-mono.conf

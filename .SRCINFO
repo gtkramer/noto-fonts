@@ -1,29 +1,47 @@
 pkgbase = noto-fonts
-	pkgdesc = Google Noto TTF fonts
+	pkgdesc = Google Noto fonts
 	pkgver = 2026.03.01
-	pkgrel = 1
+	pkgrel = 2
 	epoch = 1
 	url = https://fonts.google.com/noto
 	arch = any
 	license = OFL-1.1-no-RFN
-	makedepends = git
-	source = git+https://github.com/notofonts/notofonts.github.io#tag=noto-monthly-release-2026.03.01
+	source = https://github.com/notofonts/notofonts.github.io/archive/refs/tags/noto-monthly-release-2026.03.01.zip
 	source = 66-noto-sans.conf
 	source = 66-noto-serif.conf
 	source = 46-noto-sans.conf
 	source = 46-noto-serif.conf
-	sha256sums = c7f8df75c544aba6603f02480d49d04301d9e31dcd009abf153ee61785c9a1c1
-	sha256sums = 52684bebf6447be22618d2a04ff37623ec92f9d8ccf6b6f972e5bcbcfee90d69
-	sha256sums = 4459944b63dc083107280f5d7375c69746bf80a09416a4a4909a100e58e5a33a
-	sha256sums = 83a8faf6a47954075f97a2d555048e2a6689c38603b2ca00150157bf645f4593
-	sha256sums = c94368b24506770767d003e5bcba589a8e402e489c240ee52453bf3ac7e9b5fa
+	b2sums = 469753c89e0a50b222b0ce233b008156343f25b809596b935ed50526260a503a4e6e8ee187fb131d8dddb8ee789701cc1e0d914ec772973a4f589acaf10e484f
+	b2sums = e815ccb7ab5640b065719dc7d2a15fd09054d838f92d1c139bfb60ee4d84cad54800b2e0604746814470f7e9366b1c4858ba73ce308cba39164cc2375ff35d99
+	b2sums = d91cd726e49a4b0a8351299017b9693bbbb9c7761277ba528687894db7d3bc82312b299e255e47018c14b7d0afffba43c076f0f8513609a52d310f3f6f598e72
+	b2sums = 0da01b10cb835c78d5d5469ca5572397d47fb90815009176a65d9e616e344ec8e5c786a164d8ef00586ba1f81b07d7f949f39b5950f577a9c0e47ec7eb732434
+	b2sums = 88ff5f0df73498b47d8ee6256989aea8f760fa3558841901f3ec389c3f6d7906e8d83d82629ee5f11ba04f4da1dd7199decf32dbdd7fc9707b2791e3d6aa9cf5
 
-pkgname = noto-fonts
-	optdepends = noto-fonts-cjk: CJK characters
-	optdepends = noto-fonts-emoji: Emoji characters
-	optdepends = noto-fonts-extra: additional variants (condensed, semi-bold, extra-light)
+pkgname = ttf-noto-fonts
+	optdepends = ttf-noto-fonts-extra: Extra width and weight variants (condensed, semi, extra)
+	optdepends = ttf-noto-fonts-cjk: Chinese, Japanese, and Korean glyphs
+	optdepends = ttf-noto-fonts-emoji: Emoji glyphs
+	provides = noto-fonts
 	provides = ttf-font
+	conflicts = noto-fonts
+	replaces = noto-fonts
 
-pkgname = noto-fonts-extra
-	pkgdesc = Google Noto TTF fonts - additional variants
-	depends = noto-fonts
+pkgname = ttf-noto-fonts-extra
+	pkgdesc = Extra variants of Google Noto fonts
+	depends = ttf-noto-fonts
+	provides = noto-fonts-extra
+	conflicts = noto-fonts-extra
+	replaces = noto-fonts-extra
+
+pkgname = otf-noto-fonts
+	optdepends = otf-noto-fonts-extra: Extra width and weight variants (condensed, semi, extra)
+	optdepends = otf-noto-fonts-cjk: Chinese, Japanese, and Korean glyphs
+	optdepends = ttf-noto-fonts-emoji: Emoji glyphs
+	provides = noto-fonts
+	conflicts = noto-fonts
+
+pkgname = otf-noto-fonts-extra
+	pkgdesc = Extra variants of Google Noto fonts
+	depends = otf-noto-fonts
+	provides = noto-fonts-extra
+	conflicts = noto-fonts-extra
